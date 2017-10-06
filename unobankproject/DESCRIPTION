@@ -1,0 +1,11 @@
+Package: unobankproject
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: person("Arun", "Ranganathan", email = "aranganathan@unomaha.edu",
+  role = c("aut", "cre"))
+Maintainer: <aranganathan@unomaha.edu>
+Description: This is a package that has function to build loss models.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
