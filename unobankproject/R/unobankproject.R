@@ -1,21 +1,17 @@
-# Hello, world!
-#
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
+# These are a collection of useful functions in R
+# done as a part of independent study at UNO
 
 bin_name = function(x) {
   fico_increments <- 40
   low = 480 + (x - 1) * fico_increments
   high = low + fico_increments
   paste(low, high, sep = "-")
+}
+
+
+pct <- function(x) {
+  tbl <- table(x)
+  tbl_pct <- cbind(tbl, round(prop.table(tbl) * 100, 2))
+  colnames(tbl_pct) <- c('Count', 'Percentage')
+  knitr::kable(tbl_pct)
 }

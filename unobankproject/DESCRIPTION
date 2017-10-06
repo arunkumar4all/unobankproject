@@ -9,3 +9,4 @@ Description: This is a package that has function to build loss models.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.0.1
