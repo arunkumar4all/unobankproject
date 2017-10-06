@@ -1,5 +1,13 @@
-# These are a collection of useful functions in R
-# done as a part of independent study at UNO
+#' @title bin_name
+#' @description Create bin's in increments
+#' @details Calculate the percentage of concordant and discordant pairs for a given logit model.
+#' @author Arun Ranganathan \email{aranganathan@unomaha.edu}
+#' @export bin_name
+#' @param x Number
+#' @return Bins
+#' @examples
+#' bin_name(100)
+
 
 bin_name = function(x) {
   fico_increments <- 40
@@ -8,6 +16,17 @@ bin_name = function(x) {
   paste(low, high, sep = "-")
 }
 
+
+#' @title pct
+#' @description Create pct's in a table
+#' @details Calculate percentage/frequency.
+#' @author Arun Ranganathan \email{aranganathan@unomaha.edu}
+#' @export pct
+#' @param x Number
+#' @return table
+#' @examples
+#' a<-rbind(sample(c(1:10),20, replace = T))
+#' pct(a)
 
 pct <- function(x) {
   tbl <- table(x)
