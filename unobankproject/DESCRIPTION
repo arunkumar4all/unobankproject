@@ -1,6 +1,6 @@
 Package: unobankproject
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Functions used to build predictive models
 Version: 0.1.0
 Author: person("Arun", "Ranganathan", email = "aranganathan@unomaha.edu",
   role = c("aut", "cre"))

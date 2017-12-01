@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#' @title bin_name\n#' @description Create bin's in increments\n#' @details Calculate the percentage of concordant and discordant pairs for a given logit model.\n#' @author Arun Ranganathan \\email{aranganathan@unomaha.edu}\n#' @export bin_name\n#' @param x Number\n#' @return Bins\n#' @examples\n#' bin_name(100)\n\n\nbin_name = function(x) {\n  fico_increments <- 40\n  low = 480 + (x - 1) * fico_increments\n  high = low + fico_increments\n  paste(low, high, sep = \"-\")\n}\n\n\n#' @title pct\n#' @description Create pct's in a table\n#' @details Calculate percentage/frequency.\n#' @author Arun Ranganathan \\email{aranganathan@unomaha.edu}\n#' @export pct\n#' @param x Number\n#' @return table\n#' @examples\n#' a<-rbind(sample(c(1:10),20, replace = T))\n#' pct(a)\n\npct <- function(x) {\n  tbl <- table(x)\n  tbl_pct <- cbind(tbl, round(prop.table(tbl) * 100, 2))\n  colnames(tbl_pct) <- c('Count', 'Percentage')\n  knitr::kable(tbl_pct)\n}\n",
+    "created" : 1512093264445.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2345229385",
+    "id" : "8F57A613",
+    "lastKnownWriteTime" : 1507295218,
+    "last_content_update" : 1507295218,
+    "path" : "C:/Users/Arun/Desktop/Uno/Project/IndependentStudy/unobankproject/R/unobankproject.R",
+    "project_path" : "R/unobankproject.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,12 +1,7 @@
 \name{unobankproject}
 \alias{unobankproject}
-\title{Model building!}
-\usage{
-bin_name(x)
-}
+\title{Model building help packages!}
 \description{
-Create FICO Bin!'.
+Functions in this package is used to build models'.
 }
-\examples{
-bin_name(100)
-}
+
