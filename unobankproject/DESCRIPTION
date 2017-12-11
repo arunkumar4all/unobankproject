@@ -11,5 +11,5 @@ LazyData: true
 RoxygenNote: 6.0.1
 Imports: dplyr,ggplot2
 Depends: car, plotly
-Suggests: bit64, covr
-
+Suggests: bit64, covr, knitr, rmarkdown
+VignetteBuilder: knitr
