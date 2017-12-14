@@ -4,7 +4,7 @@ author: "Arun Ranganathan"
 date: "December 10, 2017"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Making credit risk modeling easier}
+  %\VignetteIndexEntry{"Making credit risk modeling easier"}
   %\VignetteEngine{knitr::rmarkdown}
   %\usepackage[utf8]{inputenc}
 ---
@@ -34,5 +34,34 @@ options(knitr.table.format = "latex")
 Credit risk modeling is a complex task for Bank's. I created a set of functions that would make it easier for building models.
 
 Here are some sample functions written for this package development exercise.
+
+### Distributions
+
+```{r, eval=FALSE}
+
+pct_freq <- function(x) {
+  tbl <- table(x)
+  tbl_pct <- cbind(tbl, round(prop.table(tbl) * 100, 2))
+  colnames(tbl_pct) <- c('Count', 'Percentage')
+  knitr::kable(tbl_pct)
+}
+
+```
+
+This function takes in a vector of values and create a frequency or distribution table and display the results in a knitr kable table format. Quick glance on distribution of variables gives us a good idea on how to deal with that variable.
+
+```{r}
+
+a<-rbind(sample(c(1:10),20, replace = T))
+pct_freq(a)
+
+```
+
+### Variance inflation factor
+
+Variance inflation factor is a measure of multicollinearity between variables. VIF can be used to remove highly collinear variables. When we have hundreds of variables it is hard to remove variables one by one. vif_glmrepeat function will remove highly collinear variables that are above threshold one by one. Finally we will have variables that are below our threhold.
+
+
+
 
 

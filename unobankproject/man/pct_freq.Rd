@@ -22,7 +22,7 @@ Second variable "Percentage" shows the percentage frequency of this number.
 }
 \examples{
 a<-rbind(sample(c(1:10),20, replace = T))
-pct(a)
+pct_freq(a)
 }
 \author{
 Arun Ranganathan \email{aranganathan@unomaha.edu}

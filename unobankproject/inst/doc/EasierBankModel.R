@@ -19,3 +19,19 @@ if (output=="html") opts_chunk$set(out.width = '400px', dpi=100) else
 
 options(knitr.table.format = "latex")
 
+## ---- eval=FALSE---------------------------------------------------------
+#  
+#  pct_freq <- function(x) {
+#    tbl <- table(x)
+#    tbl_pct <- cbind(tbl, round(prop.table(tbl) * 100, 2))
+#    colnames(tbl_pct) <- c('Count', 'Percentage')
+#    knitr::kable(tbl_pct)
+#  }
+#  
+
+## ------------------------------------------------------------------------
+
+a<-rbind(sample(c(1:10),20, replace = T))
+pct_freq(a)
+
+
